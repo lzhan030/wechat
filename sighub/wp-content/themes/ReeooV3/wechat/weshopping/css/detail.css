@@ -1,0 +1,51 @@
+body{
+		font-size:14px;
+	} 
+	/*用于规格的选中
+	.current img{
+		border:3px solid red;
+	}*/
+	.optionimg.current img{
+		border:3px solid red;
+	}
+	.option.current{
+		border:3px solid red;
+	}
+	.detail-group .property {
+		color: #333;
+		float: left;
+		line-height: 30px;
+		height: 30px;
+		display: inline-block;
+		padding: 0 5px;
+		margin: 0 10px 10px 0;
+		background: #fff;
+		min-width: 49px;
+		text-align: center;
+		border: 1px solid #edeeef;
+		font-size: 13px;
+		cursor: pointer;
+	}
+	.detail-group .current {
+		background: #f90;
+		color: #fff;
+		border: 1px solid #f90;
+		text-shadow: none;
+	}
+	.detail-group .propertyimg {
+		color: #333;
+		float: left;
+		line-height: 40px;
+		height: 75px;
+		display: inline-block;
+		padding: 0 5px;
+		margin: 0 10px 10px 0;
+		background: #fff;
+		min-width: 49px;
+		text-align: center;
+		border: 1px solid #edeeef;
+		font-size: 12px;
+	}
+	.detail-group {
+		overflow: hidden;
+	}

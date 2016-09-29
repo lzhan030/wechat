@@ -1,0 +1,28 @@
+<?php
+/*认证服务号则通过oauth2.0获取fromuser*/
+if(empty($fromuser)){
+	$usewidinfo_oauth=web_admin_getpri_gweid($gweidtrue);//通过gweid拿到私有的认证服务号信息，如果不是则拿不到
+	if(!empty($usewidinfo_oauth['wid'])){
+		$errorcode=$_GET['errorcode'];
+		if(empty($errorcode)){
+			$fromuser=$_SESSION['oauth_openid_common']['openid'];
+			$weid=$_SESSION['oauth_weid_common']['weid'];
+			if(empty($fromuser)||($_SESSION['oauth_openid_common']['gweid']!=$gweid)){
+				$appid=$usewidinfo_oauth['menu_appId'];
+				$secret=$usewidinfo_oauth['menu_appSc'];
+				$reurl=urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+				$rurl=home_url().'/wp-content/themes/ReeooV3/wesite/common/common_oauth_openid_test.php?appid='.$appid.'&secret='.$secret.'&gweid='.$gweid.'&gweidtrue='.$gweidtrue.'&reurl='.$reurl;
+				$redriect_url=urlencode($rurl);
+				$url = $rurl.'&appid='.$appid.'&redirect_uri='.$redriect_url.'&response_type=code&scope=snsapi_base&state=123#wechat_redirect';
+				header("Location:".$url);
+				$fromuser=$_SESSION['oauth_openid_common']['openid'];
+				$weid=$_SESSION['oauth_weid_common']['weid'];
+			}
+		}
+		if(empty($fromuser)){
+			exit();
+		}
+	}
+}
+/*认证服务号则通过oauth2.0获取fromuserEND*/
+?>

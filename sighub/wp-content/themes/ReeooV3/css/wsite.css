@@ -1,0 +1,187 @@
+body{
+	margin:0;
+	padding:0;
+	font-size:14px;
+	color:#1C1C1C;
+	background:none;
+}
+	
+.fontpurple{
+	color:#008FFF;
+}
+
+.main{
+width:100%;
+height:500px;
+}
+
+.main-title{
+width:88%;
+height:40px;
+font-weight: bolder;
+}
+
+/*2014-07-09add*/ 
+.main-titlenew{
+width:88%;
+height:40px;
+margin-left:30px;
+}
+
+.bgimg {
+	margin:  20px 20px 0 0;
+	margin-left: 2%;
+}
+
+.bgimg_warning{
+	height: 1px;
+	background-color:#C09853;
+	margin:  20px 20px 0 0;
+}
+
+.title-1{
+width:700px;
+height:40px;
+font-size:16px;
+float:left;
+line-height:50px;
+color:#1C1C1C;
+font-family: "微软雅黑",Arial,"宋体";
+}
+
+.title-2{
+width:660px;
+height:40px;
+font-size:14px;
+float:left;
+line-height:50px;
+text-align:right;
+color:#1C1C1C;}
+
+.home{
+font-size:14px;
+line-height:30px;
+}
+.content{
+float:left;
+width:auto;
+height:400px;
+margin-top:20px;
+}
+.content-1{
+width:auto;
+height:auto;
+float:left;
+padding-left:25px;}
+.content-1-title{
+	width:211px;
+	height:40px;
+	font-size: 14px;
+	color:#1C1C1C;
+}
+
+.wsite_fs {
+	padding:20px;
+	margin:20px;
+	width:400px;
+	color:blue; 
+	border:1px dashed ;
+	}
+.wsite_lg {
+	color:#06c;
+	font-weight:800; 
+	background:#fff;
+	border-bottom: 0px;
+	font-size: 16px;
+	width: 50%;
+	margin-bottom: 5px;
+}
+.upload-btn{
+	float: right;
+	width:130px;
+}
+.upload-panel{
+	width: 90%;
+	margin-top:20px;
+}
+.menu-input {
+	width: 50%;
+}
+.dlg-title{
+	font-family: "微软雅黑",Arial,"宋体";
+}
+.dlg-panel{
+	height:525px;
+}
+.site-content{padding:0 30px;}
+.main_auto{padding-left:30px;}
+
+/* wepay global setting page */
+.gs-line{line-height:35px;clear:both;}
+.gs-label{float:left;width:135px;}
+.gs-left{float:left;}
+.gs-input-url{float:left;width:315px;}
+.gs-input{float:left;width:552px;}
+
+/* account_info page */
+.ai-line{line-height:40px;clear:both;}
+.ai-label{float:left;width:135px;}
+.ai-left{float:left;}
+.ai-input-url{float:left;width:315px;}
+.ai-input{float:left;width:552px;}
+/* checkrightsdetails page */
+.ri-line{line-height:40px;clear:both;}
+.ri-label{float:left;width:115px;}
+.ri-left{float:left;}
+.ri-input{float:left;width:312px;}
+
+/* menu_insert_dialog */
+.input-line{margin-bottom:10px;}
+
+/*wechat_account_list page style*/
+.fontweight{font-weight: bold;}
+.lineheight{line-height: 10px;}
+.wechatmargin{margin-top: -7px; margin-left: 10px;}
+.wechat_account{
+	width: 94%; 
+	margin-top: 80px;
+	/*padding-bottom: 40px;*/
+	margin-bottom: 20px;
+	min-height: 40px;
+	background-color: #fafafa;
+	background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+	background-repeat: repeat-x;
+	border-bottom: 1px solid #DDD;
+	border-left: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	border-radius: 4px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+.wechat_accountthead{
+	padding: 0 10px;
+	border-color: #DDD;
+	border-top: 2px #00AFF0 solid;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.wechat_accountdiv{
+	font-size:14px;
+	margin: 10px 0;
+	font-family: inherit;
+	/*font-weight: bold;*/
+	line-height: 20px;
+	color: inherit;
+	text-rendering: optimizelegibility;
+}
+.wechat_accountdiv a{
+	font-size: 14px;
+	margin-left: 10px;
+	font-weight: normal;
+}
+.wechatpull_right{
+	float: right;
+}
+.wechatpull_left{
+	float: left;
+}

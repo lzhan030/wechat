@@ -1,0 +1,28 @@
+.header{background:url(images/header_bg.png) repeat-x top;}
+.header span{text-shadow:1px 1px #324E1D;}
+a{color:#324E1D;}
+blockquote{color:#324E1D;}
+h6{color:#F1FF9F;}
+a.left_bt{background:url(images/left_bt.png) no-repeat center; text-shadow:1px 1px #667F17;}
+.left_nav a{text-shadow:1px 1px #667F17; background:url(images/left_bt.png) no-repeat center; }
+.right_nav a{text-shadow:1px 1px #667F17;background:url(images/left_bt.png) no-repeat center; }
+
+.post_details{background-color:#324E1D;}
+.entry ul li{background:url(images/bullet.gif) no-repeat left;}
+.comment span a{color:#324E1D;}
+.services_content a{color:#324E1D;}
+
+input.form_submit{background:url(images/left_bt.png) no-repeat center;text-shadow:1px 1px #667F17;}
+input.form_submit_right{background:url(images/left_bt.png) no-repeat center;text-shadow:1px 1px #667F17;}
+input.contact_submit{background:url(images/left_bt.png) no-repeat center;text-shadow:1px 1px #667F17;}
+
+.corner_wrap h2 a:hover, .corner_wrap h2 a:focus{ color:#324E1D;}
+
+.trigger a:hover, .trigger a:hover:focus{color:#324E1D;}
+.toggle_container ul li a:hover, .toggle_container ul li a:focus{color:#667F17;}
+
+a#next{background:url(images/right_nav_a.png) no-repeat center;}
+a#prev{background:url(images/left_nav_a.png) no-repeat center;}
+
+#footer{background:url(images/footer_bg.jpg) repeat-x center;}
+#footer span{text-shadow:1px 1px #324E1D;}

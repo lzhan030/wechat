@@ -1,0 +1,106 @@
+﻿<?php defined('IN_IA') or exit('Access Denied');?>
+<?php include $this -> template('header');?>
+
+<body >
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/uploadexcel.css">
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/we7/style/font-awesome.css" />
+		<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/we7/style/common.css?v=<?php echo TIMESTAMP;?>" />
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/video.css">
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/we7/script/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/we7/script/bootstrap.js"></script>
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/we7/script/common.js?v=<?php echo TIMESTAMP;?>"></script>
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/we7/script/emotions.js"></script>
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/wsite_mobile.css">
+
+		<style type="text/css">
+			a:visited {
+				color: #FF00FF
+			}
+			body {
+			    background: #ECECEC;
+				font: 16px/1.5 "Microsoft Yahei","微软雅黑",Tahoma,Arial,Helvetica,STHeiti;
+			}
+			
+		</style>
+	<script>
+		KindEditor.ready(function(K) {
+			window.editor = K.create('#conUrl', {
+			items:["emoticons","link","unlink"],
+			width:'650px',
+			height:'215px'}); 
+		});
+	</script>
+
+<?php //echo $htmlData; ?>
+	<div class="mobile-div img-rounded">
+	<div class="mobile-hd">微公告 > <font class="fontpurple">老师公告 </font></div>
+	<div class="mobile-content">
+		<h4>标题：<?php echo $notice_title ?></h4>
+		<?php if($notice_allowcomments==1){ ?>
+			<!--<i><a style='font-size:20px;' href='<?php //echo $this->createMobileUrl('replyteacherlist',array('GWEID' => $gweid,'fromuser'=>$fromuser,'noticeId'=>$notice_id));?>'>评论</a></i>-->
+			<i><a style='font-size:20px;' href='<?php echo $this->createMobileUrl('replyteacherlist',array('gweid' => $gweid,'noticeId'=>$notice_id));?>'>评论</a></i>
+		<?php } ?>
+	</div>
+	</div>
+  <!--测试-->
+	<div class="mobile-div img-rounded">
+		<div class="mobile-hd">
+			<font class="">公告内容</font>
+		</div>
+		<table cellpadding="1%" cellspacing="1%" class="neirong-box" style="margin-left:3%;margin-top:3%">
+			<tbody>
+				<tr>
+				   <td id="article_content">					     
+					<h4><?php echo $notice_content ;?></h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="font-size: 13px;"><i><label for="user_nikename"><font color=Red>公告时间: </font></label>
+						<?php echo $notice_date ?></i>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<!--测试-->
+</body>
+	
+<script language='javascript'>	
+
+	KindEditor.ready(function(K) {
+			//var editor1 = K.create('textarea[name="content1"]', {
+			window.editor1 = K.create('textarea[name="content1"]', {
+				cssPath : '<?php bloginfo('template_directory'); ?>/js/editor/plugins/code/prettify.css',
+				uploadJson : '<?php bloginfo('template_directory'); ?>/js/editor/php/sae_upload_json.php',
+				fileManagerJson : '<?php bloginfo('template_directory'); ?>/js/editor/php/sae_file_manager_json.php',
+				allowFileManager : true,
+				afterCreate : function() {
+					var self = this;
+					K.ctrl(document, 13, function() {
+						self.sync();
+						K('form[name=example]')[0].submit();
+					});
+					K.ctrl(self.edit.doc, 13, function() {
+						self.sync();
+						K('form[name=example]')[0].submit();
+					});
+				}
+			});
+			
+			prettyPrint();
+		});
+				
+	function my_picktrue(obj) { 
+		editor1.clickToolbar("image");  
+	}
+	
+	function close2(){
+		window.opener=null;
+		setTimeout("self.close()",0);
+	}
+</script>
+</html>
+<?php include $this -> template('footer');?>

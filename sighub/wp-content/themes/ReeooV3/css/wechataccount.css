@@ -1,0 +1,10 @@
+.menu{border: 1px solid #FFF;padding:5px 10px;}
+.list-title{padding: 0px 10px;border: 1px solid #FFF;}
+.logo{margin-top:10px;}
+.panel{border-radius: 0px; -webkit-box-shadow: 0 0px 0px rgba(0,0,0,0.05); box-shadow: 0 0px 0px rgba(0,0,0,0.05);}
+.header_left{float:left;}
+.left_ul{float:left; padding-top:20px;}
+.left_li{float:left; margin-right:10px;}
+.right_ul{float:right;}
+.right_li{float:left;}
+.right_account_li{float:left; margin-right:20px;}

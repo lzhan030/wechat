@@ -1,0 +1,15 @@
+.head{width:100%; height:40px; line-height:40px; background:#51a351; margin-bottom:5px; padding:0 5px; color:#FFF; box-shadow:0 2px 2px 0 rgba(0,0,0,0.2); position:fixed; z-index:9000; left:0; top:0;}
+.head .bn{display:inline-block; height:30px; line-height:30px; padding:0 10px; margin-top:4px; font-size:30px; color:#FFF; text-decoration:none;}
+.head .bn.pull-right{position:absolute; right:5px; top:0;}
+.head .bn .buy-num{display:inline-block; width:20px; height:20px; line-height:20px; text-align:center; background:#5a475a; font-size:12px; font-family:Arial; position:absolute; right:-3px; top:-3px;}
+.head .title{font-size:14pt;display:block;padding-left:10px;font-weight:bolder;text-align:center;height:40px;line-height:40px;text-overflow:ellipsis;white-space:nowrap;overflow: hidden;}
+.head .order{filter:Alpha(opacity=70); background:#000; background:rgba(0, 0, 0, 0.7); position:absolute; z-index:9999; left:0; height:280px; overflow-x:hidden; overflow-y:scroll;}
+.head .order li > a{display:block; padding:0 10px; min-width:100px; height:35px; line-height:35px; font-size:16px; color:#FFF; text-decoration:none; border-top:1px #666 solid;}
+.head .order li > a i{display:inline-block; width:20px;}
+.head .order li > a.smtype{padding-left:15px; font-size:15px;}
+
+.footerbar{position:fixed; left:0; bottom:0px; width:100%; height:50px; background:#f1f1f1; border-top:1px solid #c9c9c9;}
+.footerbar a{display:block; float:left; padding-top:3px; width:24.5%; height:49px; text-align:center; color: #4f4f4f; text-decoration:none; border-left:1px solid #e1e1e1;}
+.footerbar a:first-child{border-left:0;}
+.footerbar a i{font-size:20px; display:block;}
+#footer { position:fixed;width:100%;left:0;bottom:0px;height:30px;line-height:30px;color:#fff;background:#333;border-top:0;}

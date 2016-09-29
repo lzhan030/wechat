@@ -1,0 +1,13 @@
+
+fieldset {
+	padding:20px;
+	margin:20px;
+	width:400px;
+	color:blue; 
+	border:1px dashed ;
+	}
+legend {
+	color::#06c;
+	font-weight:800; 
+	background:#fff;
+	}

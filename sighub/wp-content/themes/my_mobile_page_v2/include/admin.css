@@ -1,0 +1,81 @@
+.admin_content{
+width:700px;
+background-color:#FFFFFF;
+padding:20px;
+margin:15px 0 0 0;
+border:1px #DFDFDF solid;
+-moz-border-radius:8px;
+-webkit-border-radius:8px;
+-khtml-border-radius:8px;
+border-radius:8px;
+}
+.admin_content h1{
+font-size:26px; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; color:#5F5F5F; text-shadow:1px 1px #fff; padding:0px; margin:10px 0 30px 0; text-align:center;
+}
+.admin_content h2{
+clear:both;
+font-size:18px; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic;color:#fff; text-shadow:1px 1px #000; margin:10px 0 10px 0; padding:10px;
+background-color:#5F5F5F;
+border:1px #000 solid;
+-moz-border-radius:8px;
+-webkit-border-radius:8px;
+-khtml-border-radius:8px;
+border-radius:8px;
+}
+.admin_row{
+width:650px;
+float:left;
+clear:both;
+padding:20px;
+border:1px #DFDFDF solid;
+-moz-border-radius:8px;
+-webkit-border-radius:8px;
+-khtml-border-radius:8px;
+border-radius:8px;
+margin:0 0 10px 0;
+}
+.social_icon_row{
+width:180px; float:left; text-align:center; padding:0 10px 0 5px;
+}
+.admin_row label{
+width:250px;
+float:left;
+}
+label.social_icon_label{
+width:180px;
+float:left;
+text-transform:capitalize;
+}
+.admin_row input{
+width:200px; float:left;
+}
+input.social_icon_input{
+width:180px; float:left; clear:both;
+}
+
+.admin_row select{
+width:200px; float:left;
+}
+.admin_row textarea{
+width:420px; float:left; height:100px;
+}
+.admin_color{
+width:110px;
+float:left;
+padding:0 10px 0 10px;
+}
+.color_radio{
+width:85px;
+margin:auto;
+border:1px #DFDFDF solid;
+-moz-border-radius:8px;
+-webkit-border-radius:8px;
+-khtml-border-radius:8px;
+border-radius:8px;
+text-align:center;
+padding:5px 0 5px 0;
+}
+.color_radio input{
+width:10px;
+margin:3px 0 0 12px;
+}

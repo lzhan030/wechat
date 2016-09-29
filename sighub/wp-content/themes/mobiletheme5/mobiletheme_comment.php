@@ -1,0 +1,244 @@
+<?php
+session_start();
+$path = explode ( 'wp-content', __FILE__ );
+$wp_root_path = $path [0];
+require_once ($wp_root_path . '/wp-load.php');
+
+require_once '../ReeooV3/wesite/common/dbaccessor.php';
+global $wpdb;
+
+/**
+*@function: get
+*/
+$gweid =  $_GET['gweid'];
+$mid =$_SESSION['gmid'][intval($gweid)]['mid'];
+$auth =	$_SESSION['gmid'][intval($gweid)]['auth'];
+$siteId = $_GET['siteId'];
+if(empty($siteId)){
+	$siteId = $_SESSION['orangeSite'];
+}else{
+	$_SESSION['orangeSite'] = $siteId;
+}
+
+
+/**
+*@function:封装gweid
+*/
+if(!empty($siteId)){
+	$site=web_admin_get_site($siteId);
+	foreach($site as $siteinfo){
+		$userid=$siteinfo->site_user;
+		$gweid=$siteinfo->GWEID;
+		$gweidt=$siteinfo->GWEID;
+	}
+
+	//20150417 sara new added
+	//根据当前的gweid去查找有没有处在共享虚拟号下，如果是虚拟号下的，需要将gweid换为虚拟号的gweid
+	$gweid = virtualgweid_open($gweid);
+
+	$mid =$_SESSION['gmid'][intval($gweid)]['mid'];
+	$auth =	$_SESSION['gmid'][intval($gweid)]['auth'];
+}
+
+/**
+*@function:判断会员是否审核
+*/
+$vipauditinfo=web_admin_usechat_info_group($gweid);
+foreach($vipauditinfo as $vaudit){
+	$vipaudit=$vaudit->wechat_vipaudit;
+}
+/*获取fromuser*/
+$fromuser=$_SESSION['gopenid'][intval($gweid)];
+$weid =  $_SESSION['weid'][intval($gweid)];
+//如果没有获取到fromuser则通过oauth的获取试试
+if(empty($fromuser)){
+	if($_SESSION['oauth_openid_common']['gweid']==$gweid){
+		$fromuser=$_SESSION['oauth_openid_common']['openid'];
+		$weid=$_SESSION['oauth_weid_common']['weid'];
+	}
+}
+
+if( $_GET['action']=="mobiletheme_comment" ){
+
+if ( 'POST' != $_SERVER['REQUEST_METHOD'] ) {
+	header('Allow: POST');
+	header('HTTP/1.1 405 Method Not Allowed');
+	header('Content-Type: text/plain');
+	exit;
+}
+
+/** Sets up the WordPress Environment. */
+//require( dirname(__FILE__) . '/wp-load.php' );
+
+nocache_headers();
+
+
+
+
+	$redirect_url=$_GET['redirect_url'];
+	if(empty($siteId)){
+		$siteId = $_SESSION['orangeSite']; 
+	}
+	$isShowPic = getSiteMeta('mobilethemeIsShowPic', $siteId);
+	$isShowEditor = getSiteMeta('mobilethemeIsShowEditor', $siteId);
+	$isShowVipmember = getSiteMeta('mobilethemeIsShowVipmember', $siteId);
+	$isShowVipmember_editor = getSiteMeta('mobilethemeIsShowVipmemberEditor', $siteId);
+	$useContact = getSiteMeta('mobilethemeContact', $siteId);
+	
+	/**
+	*@function:通过fromuser拿到会员信息
+	*/
+	$memberinfo=null;
+	$memberinfo_wgroup=null;
+	/*if((!empty($fromuser))&&(!empty($weid))){		
+		//20140624 janeen update
+		//$memberinfo =  web_admin_member($weid, $fromuser);
+		$memberinfo_wgroup =  web_admin_member_wgroup($weid, $fromuser);				
+	}else*/ if((!empty($fromuser))&&(!empty($weid))&&(!empty($gweid))){	
+			$memberinfo_wgroup =  web_admin_member_wgroup($weid,$gweid,$fromuser);						
+	}
+	if(!empty($memberinfo_wgroup)){
+		foreach($memberinfo_wgroup as $minfo_wgroup){
+			$mid=$minfo_wgroup->mid;
+		}
+	  //$memberinfo =  web_admin_member_mid($mid,$weid);
+		$memberinfo =  web_admin_member_mid_group($mid,$gweid);
+		foreach($memberinfo as $minfo){
+			$isaudit=$minfo->isaudit;
+		}
+	}else{
+		$memberinfo=null;
+	}
+	/**
+	*@function:已经登陆通过mid拿到会员信息
+	*/
+	if((empty($memberinfo))&&(!empty($mid))){				
+		//$memberinfo =  web_admin_member_mid($mid,$weid);
+		$memberinfo =  web_admin_member_mid_group($mid,$gweid);
+		foreach($memberinfo as $minfo){
+			$au_password=$minfo->password;
+			$isaudit=$minfo->isaudit;
+		}
+		if($auth!= md5($mid.$au_password."weauth3647668")){
+			$memberinfo=null;
+			unset($_SESSION['gmid'][intval($gweid)]);
+		}		
+	}
+	$result = web_user_display_index_groupnew_wesforsel($gweid);
+	foreach($result as $initfunc){
+		if($selCheck[$initfunc->func_name] == 0)
+			$selCheck[$initfunc->func_name] = $initfunc->status;
+	}
+	if(($selCheck['wechatvip']==1)&&(($isShowVipmember_editor=='true')&&(empty($memberinfo)))){
+				
+		$registerary = array("status"=>"success","message"=>"请登录","url"=>"/../ReeooV3/wesite/common/vip_login.php?gweid={$gweid}&redirect_url=".urlencode($redirect_url));				
+		echo json_encode($registerary);
+	}else if(($selCheck['wechatvip']==1)&&(($isShowVipmember_editor == 'true')&&((!empty($memberinfo))&&($vipaudit=='1')&&(($isaudit=='2')||($isaudit=='0'))))){
+		if($isaudit=='2'){
+			$hintmessage="会员身份需要审核";
+		}else if($isaudit=='0'){
+			$hintmessage="会员申请已被拒绝";
+		}
+		$registerary = array("status"=>"success","message"=>$hintmessage,"url"=>"/../ReeooV3/wesite/common/vip_perdenied.php?gweid={$gweid}&isaudit={$isaudit}&redirect_url=".urlencode($redirect_url));				
+		echo json_encode($registerary);
+	}else{
+
+
+
+
+$comment_post_ID = isset($_POST['comment_post_ID']) ? (int) $_POST['comment_post_ID'] : 0;
+
+$post = get_post($comment_post_ID);
+
+if ( empty($post->comment_status) ) {
+	do_action('comment_id_not_found', $comment_post_ID);
+	exit;
+}
+
+// get_post_status() will get the parent status for attachments.
+$status = get_post_status($post);
+
+$status_obj = get_post_status_object($status);
+
+if ( !comments_open($comment_post_ID) ) {
+	do_action('comment_closed', $comment_post_ID);
+	wp_die( __('Sorry, comments are closed for this item.') );
+} elseif ( 'trash' == $status ) {
+	do_action('comment_on_trash', $comment_post_ID);
+	exit;
+} elseif ( !$status_obj->public && !$status_obj->private ) {
+	do_action('comment_on_draft', $comment_post_ID);
+	exit;
+} elseif ( post_password_required($comment_post_ID) ) {
+	do_action('comment_on_password_protected', $comment_post_ID);
+	exit;
+} else {
+	do_action('pre_comment_on_post', $comment_post_ID);
+}
+
+$comment_author       = ( isset($_POST['author']) )  ? trim(strip_tags($_POST['author'])) : null;
+$comment_author_email = ( isset($_POST['email']) )   ? trim($_POST['email']) : null;
+$comment_author_url   = ( isset($_POST['url']) )     ? trim($_POST['url']) : null;
+$comment_content      = ( isset($_POST['comment']) ) ? trim($_POST['comment']) : null;
+
+// If the user is logged in
+$user = wp_get_current_user();
+if ( $user->exists() ) {
+	if ( empty( $user->display_name ) )
+		$user->display_name=$user->user_login;
+	$comment_author       = $wpdb->escape($user->display_name);
+	$comment_author_email = $wpdb->escape($user->user_email);
+	$comment_author_url   = $wpdb->escape($user->user_url);
+	if ( current_user_can('unfiltered_html') ) {
+		if ( wp_create_nonce('unfiltered-html-comment_' . $comment_post_ID) != $_POST['_wp_unfiltered_html_comment'] ) {
+			kses_remove_filters(); // start with a clean slate
+			kses_init_filters(); // set up the filters
+		}
+	}
+} else {
+	if ( get_option('comment_registration') || 'private' == $status )
+		wp_die( __('Sorry, you must be logged in to post a comment.') );
+}
+
+$comment_type = '';
+
+//评论时不需要检测邮箱， add by CSQ
+/*
+if ( get_option('require_name_email') && !$user->exists() ) {
+    if ( 6 > strlen($comment_author_email) || '' == $comment_author )
+        wp_die( __('<strong>ERROR</strong>: please fill the required fields (name, email).') );
+    elseif ( !is_email($comment_author_email))
+        wp_die( __('<strong>ERROR</strong>: please enter a valid email address.') );
+}
+*/
+if ( '' == $comment_content )
+	wp_die( __('<strong>ERROR</strong>: please type a comment.') );
+
+$comment_parent = isset($_POST['comment_parent']) ? absint($_POST['comment_parent']) : 0;
+
+$commentdata = compact('comment_post_ID', 'comment_author', 'comment_author_email', 'comment_author_url', 'comment_content', 'comment_type', 'comment_parent', 'user_ID');
+
+$comment_id = wp_new_comment( $commentdata );
+
+$comment = get_comment($comment_id);
+do_action('set_comment_cookies', $comment, $user);
+
+//janeen-add
+$weurl=get_comment_link($comment_id);
+$suburl=explode('#',$weurl);
+//20140430$endurl=$suburl[0].'&site='.$siteId.'&fromuser='.$fromuser.'&mid='.$mid.'&auth='.$auth.'#'.$suburl[1];
+$endurl=$suburl[0].'&site='.$siteId.'&gweid='.$gweidt.'#'.$suburl[1];
+
+$location = empty($_POST['redirect_to']) ? $endurl: $_POST['redirect_to'] . '#comment-' . $comment_id;
+//$location = empty($_POST['redirect_to']) ? get_comment_link($comment_id).'&site='.$siteId.'&mid='.$mid.'&weid='.$weid.'&fromuser='.$fromuser: $_POST['redirect_to'] . '#comment-' . $comment_id;
+//end
+
+$location = apply_filters('comment_post_redirect', $location, $comment);
+
+//wp_safe_redirect( $location );
+
+$registerary = array("status"=>"insertsuc","message"=>"","url"=>$location);
+echo json_encode($registerary);
+}
+}
+?>

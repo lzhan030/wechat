@@ -1,0 +1,4 @@
+
+		#contain{ position:relative; text-align:left;}
+		#in{ width:132px; height:25px; display:block; position:absolute; left:0; top:0; border-right:1; z-index:100; }
+		#se{/* 20140710new width:150px;*/ width:164px;height:25px;display:block;text-align:center; left:0; top:0; z-index:1;}

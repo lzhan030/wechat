@@ -1,0 +1,24 @@
+body,ul,li
+{margin: 0;padding: 0;font: 14px normal "微软雅黑", "宋体", Arial, Helvetica, sans-serif;list-style: none;}
+a{text-decoration: none;color: #000;font-size: 14px;}
+a:hover{text-decoration:none}
+
+#tabbox{ width:100%; overflow:hidden; /*margin:0 auto;*/}
+.tab_conbox{/*border: 1px solid #999;*/ border-top: none;}
+.tab_con{ display:none;}
+
+.tabs{height: 32px;border-bottom:1px solid #999;border-left: 1px solid #999;width: 100%;}
+.tabs li{height:31px;line-height:31px;float:left;border:1px solid #999;border-left:none;margin-bottom: -1px;background: #e0e0e0;overflow: hidden;position: relative;}
+.tabs li a {display: block;padding: 0 20px;border: 1px solid #fff;outline: none;}
+.tabs li a:hover {background: #ccc;}	
+.tabs .thistab,.tabs .thistab a:hover{background: #fff;border-bottom: 1px solid #fff;}
+
+.tab_con {padding:12px;font-size: 14px; line-height:175%;}
+
+.box-h3{ padding:20px 0 0; font-size:16px; font-weight:bold; text-indent:100px; color:#f00;}
+.formbox dt{ font-size:14px;}
+.load-step{ background:#eaeaea; border-top:1px dashed #ccc; padding-left:50px; }
+.load-step dl{ float:left; width:680px; margin-top:20px;}
+.load-step dd{ float:left; width:680px; line-height:25px; font-size:14px; margin:10px 0 10px 0; }
+.load-step dd a{ text-decoration:underline; color:#0069be;}
+.load-step dt{ float:left; width:680px; margin-top:15px;}

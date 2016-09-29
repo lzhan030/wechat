@@ -1,0 +1,59 @@
+
+.spanclass1
+{  
+	background:url(../resource/BackGround.jpg); 
+     display:table;
+	border:1px solid #eeeeee;
+	width:95%;
+	height:100%;
+	margin-left:2.5%;
+	corner:10px;
+
+}
+
+
+
+.horizatal1
+{
+   margin-left:2%;
+   width:100%;
+}
+
+.textarea1
+{
+  margin-left:5%;
+}
+.textarea2
+{
+  overflow-y:scroll;
+  border:1px solid #D5D5D5;
+}
+
+
+.input1
+{
+  margin-left:17%;
+}
+#startbutton
+{
+     background:url(../resource/StartButton.jpg)0 0 no-repeat;
+     -webkit-background-size: 100% 100%;
+     
+}
+#mainpage
+{
+  background:url(../resource/main2.jpg) 0 0 no-repeat;
+  -webkit-background-size: 100% 100%;
+ 
+}
+#mainpage1
+{
+  background:url(../resource/main2.jpg)0 0 no-repeat;
+ -webkit-background-size: 100% 100%;
+ 
+}
+
+
+
+        
+

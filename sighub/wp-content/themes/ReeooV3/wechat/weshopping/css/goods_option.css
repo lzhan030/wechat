@@ -1,0 +1,8 @@
+.spectable td,.spectable th {border:1px solid #ccc; vertical-align: middle;text-align:center;}
+.spectable th { font-weight: bold;}
+.spectableinput { text-align: center;}
+.f {border-color: #b94a48;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);}
+.table.table-bordered tr th,.table.table-bordered tr td{overflow:hidden; text-overflow:ellipsis;}

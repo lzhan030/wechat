@@ -1,0 +1,32 @@
+.mobile-div {
+	border: 1px #CCC solid;
+	margin: 10px 5px;
+	background: #FFF;
+	overflow: hidden;
+}
+.mobile-hd {
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px;
+	color: #666;
+	text-shadow: 0 1px #FFF;
+	border-bottom: 1px solid #C6C6C6;
+	background-color: #E1E1E1;
+	background-image: linear-gradient(bottom, #E7E7E7 0%, #f9f9f9 100%);
+	background-image: -o-linear-gradient(bottom, #E7E7E7 0%, #f9f9f9 100%);
+	background-image: -moz-linear-gradient(bottom, #E7E7E7 0%, #f9f9f9 100%);
+	background-image: -webkit-linear-gradient(bottom, #E7E7E7 0%, #f9f9f9 100%);
+	background-image: -ms-linear-gradient(bottom, #E7E7E7 0%, #f9f9f9 100%);
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #E7E7E7),color-stop(1, #f9f9f9));
+	-webkit-box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 0 #EEEEEE;
+	-moz-box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 0 #EEEEEE;
+	box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 0 #EEEEEE;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-o-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+.mobile-content {
+	margin: 10px;
+	overflow: hidden;
+}

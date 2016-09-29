@@ -1,0 +1,25 @@
+.i-applist li {
+width: 140px;
+float: left;
+height: 30px;
+line-height: 30px;
+margin-left: 10px;
+}
+
+.dlg-title{
+	font-family: "Î¢ÈíÑÅºÚ",Arial,"ËÎÌå";
+}
+
+.applist li {
+width: 120px;
+float: left;
+height: 30px;
+line-height: 30px;
+margin-left: 10px;
+}
+
+.bgimg {
+	height: 1px;
+	background-color: #FFF;
+	margin:  20px 20px 10px 0;
+}

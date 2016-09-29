@@ -1,0 +1,18 @@
+
+.btnupload{position: relative;overflow: hidden;margin-right: 4px;display:inline-block;*display:inline;padding:6px 20px;font-size:12px;line-height:18px;*line-height:20px;text-align:center;vertical-align:middle;cursor:pointer;background-color: #FFF;border:1px solid #F0B60B;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;height:33px;}
+.btnupload1{position: relative;overflow: hidden;margin-right: 4px;display:inline-block;*display:inline;padding:6px 20px;font-size:12px;line-height:18px;*line-height:20px;text-align:center;vertical-align:middle;cursor:pointer;background-color: #FFF;border:1px solid #F0B60B;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;height:33px;}
+.btnlast{position: relative;overflow: hidden;margin-right: 4px;display:inline-block;*display:inline;padding:4px 10px 4px;font-size:14px;line-height:18px;*line-height:20px;color:#fff;text-align:center;vertical-align:middle;cursor:pointer;border:1px solid #cccccc;border-color: #15B0DF;border-bottom-color:#b3b3b3;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.btn input {position: absolute;top: 0; right: 0;margin: 0;border: solid transparent;opacity: 0;filter:alpha(opacity=0); cursor: pointer;}
+.btnupload input {position: absolute;top: 0; right: 0;margin: 0;border: solid transparent;opacity: 0;filter:alpha(opacity=0); cursor: pointer;}
+.btnupload1 input {position: absolute;top: 0; right: 0;margin: 0;border: solid transparent;opacity: 0;filter:alpha(opacity=0); cursor: pointer;}
+.progress { position:relative; margin-left:120px; margin-top:-24px; width:200px; padding: 1px; border-radius:3px; display:none}
+.bar {background-color:#15B6E6; display:block; width:0%; height:20px; border-radius: 3px; }
+.percent { position:absolute; height:20px; display:inline-block; top:-6px; left:2%; color:#fff }
+.files{height:22px; line-height:22px; margin:10px 0}
+.delimg{margin-left:20px; color:#090; cursor:pointer}
+.btn1{position: relative;overflow: hidden;margin-right: 4px;display:inline-block;*display:inline;padding:4px 10px 4px;font-size:14px;line-height:18px;*line-height:20px;color:#fff;text-align:center;vertical-align:middle;cursor:pointer;border:1px solid #cccccc;border-bottom-color:#b3b3b3;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.btn1 input {position: absolute;top: 0; right: 0;margin: 0;border: solid transparent;opacity: 0;filter:alpha(opacity=0); cursor: pointer;}
+.progress1 { position:relative; margin-left:145px; margin-top:-24px; width:200px; padding: 1px; border-radius:3px; display:none}
+.bar1 {background-color:#15B6E6; display:block; width:0%; height:20px; border-radius: 3px; }
+.percent1 { position:absolute; height:20px; display:inline-block; top:-6px; left:2%; color:#fff }
+.files1{height:22px; line-height:22px; margin:10px 0}

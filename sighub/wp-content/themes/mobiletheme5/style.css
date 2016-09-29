@@ -1,0 +1,130 @@
+/*   
+Theme Name: Mobile Theme
+Theme URI: http://www.blogohblog.com
+Description: Mobile Theme is a WordPress theme meant for mobile phones and devices. Visit <a href="http://www.blogohblog.com" title="Free WordPress Themes">Blog Oh! Blog</a> for more free and premium themes.
+Author: Jai Nischal Verma
+Author URI: http://www.blogohblog.com
+Version: 1.0
+*/
+
+* {margin:0;padding:0;border:0;outline:0;}
+body{font-size:12px; font-family:Arial, Helvetica, sans-serif; background-color:#333;}
+
+a:link, a:visited{text-decoration: none; /*font-weight:bold;ma*/}
+a:hover{text-decoration:none;color: #333;}
+
+.post img{padding:0;max-width:100%;height:auto;}
+img.centered{display:block;margin-left:auto;margin-right:auto;}
+img.alignright{padding:0px;margin:0 0 5px 10px;display: inline;}
+img.alignleft{padding:0;margin:0 10px 5px 0;display:inline;}
+.aligncenter{}
+.alignleft{float:left;}
+.alignright{float:right;}
+
+#wrapper{margin:10px auto; text-align: left; border-top:1px solid #000; border-bottom:1px solid #000; background-color:#FFF;}
+#logo{margin:5px 5px 22px 5px; position:relative;}
+#logo h1 {font-size:22px;font-weight:normal; padding:10px;}
+#logo h1 a {color:#FFF;}
+#logo h2 {font-size:9px; padding:4px 4px 4px 10px; font-weight:normal; color:#fff; text-transform:uppercase;  background-color:#000; }
+
+.mobile_rss {display:block; width:18px; height:14px; position:absolute; right:0px; bottom:-20px;}
+
+div.titles{font-family: Arial, Helvetica, Georgia, Sans-serif;color:#f0f0f0;padding-left: 10px;padding-right: 10px;}
+.title_link a:link{text-decoration: none;color: #f0f0f0;}
+.title_link a:visited{text-decoration: none;color: #f0f0f0;}
+.title_link a:hover{text-decoration: none;color: #cccccc;}
+.entry{margin-left:10px;margin-right:10px;}
+#container{width:100%;}
+.sidebar{background:#ffffff;}
+#footer{margin-top:10px;margin-left:10px;margin-right:10px;margin-bottom:10px; background-color: #EFEFEF; padding:10px;}
+div.copyright{padding-left: 2px;padding-right: 10px;font-family: Arial, Helvetica, Georgia, Sans-serif;font-size: 10px;text-align: left;color: #333;}
+
+h1{font-size: 26px;font-weight:bold;}
+div.subtitle{font-size: 14px;}
+
+.imgpost {width:100%; height:150px; /*border:1px solid #EFEFEF; display:inline; margin-left:6%;*/}
+
+.post{margin:10px 5px 10px 0px; clear:both; border-bottom:1px solid #E2E2E2;}
+.title{ padding: 0px 0px 5px 0; /*margin: 10px;*/}
+.date{padding: 0px;margin: 0px;font-family: Arial, Helvetica, Georgia, Sans-serif;font-size: 11px;color: #999;}
+.post h2{font-family: Arial, Helvetica, Georgia, Sans-serif;font-size: 15px; font-weight:bold;}
+.post h2 a:link{text-decoration: none;}
+.post h2 a:visited{text-decoration: none;}
+.post h2 a:hover {color:#333;}
+
+.comment_body_author{font-family: Arial, Helvetica, Georgia, Sans-serif;font-size: 12px;color: #333333;line-height: 18px;font-weight: bold;}
+.comment_body_meta{font-family: Arial, Helvetica, Georgia, Sans-serif;font-size: 12px;color: #333333;line-height: 18px;}
+.comment_body_text{font-family: Arial, Helvetica, Georgia, Sans-serif;font-size: 12px;color: #333333;line-height: 18px;}
+p{padding: 10px 0 0 0;}
+
+.navigation{font-family: Arial, Helvetica, Georgia, Sans-serif;font-size: 12px;font-weight: bold;text-align: center;}
+.sidebar {margin:0px 20px 20px 10px;}
+.sidebar ul{list-style-type:none;margin:0;padding:0;padding-right:5px;}
+.sidebar ul li{font-family: Arial, Helvetica, Georgia, Sans-serif;padding: 10px 0 10px 0;border-bottom-style:dotted;border-bottom-width:1px;border-bottom-color:#cccccc;}
+.sidebar ul li h2{padding-bottom:10px;font-family: Arial, Helvetica, Georgia, Sans-serif;font-size: 16px;color:#222222;font-weight:bold;}
+.sidebar ul ul li{font-family: Arial, Helvetica, Georgia, Sans-serif;font-size: 12px;padding: 0 0 0 14px; line-height:18px; border-bottom-style:none; background:url(images/bullet.png) left no-repeat;}
+.sidebar a:hover {text-decoration:underline; color:#333;}
+
+/* comments */
+.comments-box {zoom: 1;margin: 30px 0 0 0;}
+.comments-box img {vertical-align: middle;}
+.comments-box h3 {color: #333;font-size: 1.4em;letter-spacing: 0;margin: 0;padding: 0 0 5px 0;}
+#nid{border-bottom: 1px solid #ccc;}
+#respond {background: #fff;margin: 20px 0 0 0;padding: 5px;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;-moz-border-radius-bottomleft: 5px;-moz-border-radius-bottomright: 5px;-khtml-border-radius: 5px;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-webkit-border-bottom-left-radius: 5px;-webkit-border-bottom-right-radius: 5px;}
+#respond p {color: #777;line-height: 1.4em;margin: 10px 0 0 0;}
+.cancel-comment-reply {padding: 5px 0 0 0; text-decoration:underline;}
+.cancel-comment-reply a {color: #ff0000; font-style:italic;}
+.text {border: 1px solid #ddd;padding: 2px;color: #777;width: 200px;}
+/* framework for comments */
+ol.commentlist a:link {text-decoration: none;}
+ol.commentlist li div.vcard cite.fn a.url:hover {text-decoration: none;}
+ol.commentlist {margin: 10px 0 0 0;padding: 0;background: #fff;}
+ol.commentlist li {margin: 10px 0 10px 0;padding: 10px;list-style-type: none;border: 1px solid #e9e9e9;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;-moz-border-radius-bottomleft: 5px;-moz-border-radius-bottomright: 5px;-khtml-border-radius: 5px;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-webkit-border-bottom-left-radius: 5px;-webkit-border-bottom-right-radius: 5px;}
+ol.commentlist li.alt {background: #efefef;}
+ol.commentlist li div.vcard cite.fn {font-style: normal;font-weight: bold;}
+ol.commentlist li div.vcard cite.fn a.url {color: #222;}
+ol.commentlist li div.vcard img.avatar {float: right;}
+ol.commentlist li div.vcard img.avatar-32 {padding: 2px;background: #fff;border: 1px solid #ddd;}
+ol.commentlist li div.vcard img.photo {padding: 2px;background: #fff;border: 1px solid #ddd;}
+ol.commentlist li div.vcard span.says {color: #888;}
+ol.commentlist li div.comment-meta {margin: 3px 0 0 0;font-size: 0.9em;}
+ol.commentlist li div.comment-meta a {color: #aaa;text-decoration:none;}
+ol.commentlist li p {margin: 15px 0 0 0;line-height: 1.4em;}
+ol.commentlist li div.reply {background: #ccc;color: #333;width: 33px;margin: 10px 0 0 0;padding: 2px 5px 2px 5px;line-height: 16px;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;-moz-border-radius-bottomleft: 5px;-moz-border-radius-bottomright: 5px;-khtml-border-radius: 5px;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-webkit-border-bottom-left-radius: 5px;-webkit-border-bottom-right-radius: 5px;}
+ol.commentlist li div.reply a {color: #fff !important;}
+ol.commentlist li div.reply a:hover {color: #fff !important;text-decoration: none;}
+ol.commentlist li ul.children li {margin: 10px 0 0 0;background: #fff;border: 1px solid #e9e9e9;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;-moz-border-radius-bottomleft: 5px;-moz-border-radius-bottomright: 5px;-khtml-border-radius: 5px;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-webkit-border-bottom-left-radius: 5px;-webkit-border-bottom-right-radius: 5px;}
+ol.commentlist li ul.children li li.alt {background: #fff;}
+/* comment form */
+#commentform {margin-top: 5px;}
+#commentform input {width: 160px;margin: 2px 5px 1px 0;padding: 5px;border: 1px solid #ddd; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+#commentform input:focus {border: 1px solid #191919;}
+#commentform .author {padding: 3px 3px 3px 5px;background: fff;color: #666;}
+#commentform .email {padding: 3px 3px 3px 5px;background: fff;color: #666;}
+#commentform .url {padding: 3px 3px 3px 5px;background: fff;color: #666;}
+#commentform textarea {width: 100%;height: 100px;padding: 2px;border: 1px solid #ddd; font-family:Arial, Helvetica, sans-serif;}
+#commentform textarea:focus {border: 1px solid #191919;}
+#commentform .submit {margin: 0;padding: 4px;color: #999;font-weight: bold;border: 1px solid #ddd;background: #f8f8f8;width: 155px;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;-moz-border-radius-bottomleft: 5px;-moz-border-radius-bottomright: 5px;-khtml-border-radius: 5px;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-webkit-border-bottom-left-radius: 5px;-webkit-border-bottom-right-radius: 5px;}
+#commentform .submit :hover {background: #333;border: 1px solid #191919;text-decoration: underline;color: #fff;}
+
+#topsearch {margin:10px;}
+#ls { width:200px; border:1px solid #ccc; padding:3px 3px 3px 5px; font-family:Arial; font-size:11px;}
+.searchbutton {border:1px solid #ccc; padding:2px; font-family:Arial, Helvetica, sans-serif; font-size:11px;}
+h2.search {border-bottom:1px solid #CCC; font-size:18px; font-weight:normal; margin-bottom:20px;}
+
+/*--- Content Styling ---*/
+.content a {text-decoration:underline;/* text-decoration:none;*/}
+.content p {margin-bottom:10px;font-size:15px;}
+.content ul, .content ol  {margin:20px;}
+.content ul li, .content ol li {margin:5px; padding-left:25px;}
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {margin-bottom:10px;}
+.alignleft {float:left; margin:0 15px 0 0;}
+.alignright {float:right; margin:0 0 0 15px;}
+.content blockquote { margin:0 0 0 30px; padding:10px 10px 5px 40px;}
+
+.goleft a {float:left; padding:5px; text-decoration:underline;}
+.goright a {float:right; text-decoration:underline; padding:5px;}
+
+.sticky .title h2 a{ 
+font-style:italic
+} 

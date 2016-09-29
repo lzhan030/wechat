@@ -1,0 +1,249 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Cron Manager\n"
+"POT-Creation-Date: 2015-01-28 11:45+0100\n"
+"PO-Revision-Date: 2015-01-28 11:46+0100\n"
+"Last-Translator: Jakub Mikita <kuba@wordpressgeeks.co.uk>\n"
+"Language-Team: Kuba Mikita <contact@jmikita.com>\n"
+"Language: Polish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ../inc\n"
+
+#: ../functions.php:38
+msgid "At next page refresh"
+msgstr "Przy następnym odświeżeniu strony"
+
+#: ../functions.php:40
+msgid "In"
+msgstr "Za"
+
+#: ../inc/ajax.php:25 ../inc/ajax.php:75 ../inc/ajax.php:98
+#: ../inc/ajax.php:156 ../inc/ajax.php:178
+msgid "Sorry, wrong noonce."
+msgstr "Zły noonce."
+
+#: ../inc/ajax.php:28
+msgid "Sorry, interval can't be less than 1 second."
+msgstr "Interwał nie może być mniejszy niż jedna sekunda"
+
+#: ../inc/ajax.php:31
+msgid "Sorry, Schedule name can't be numeric."
+msgstr "Nazwa harmonogramu nie może być numerem."
+
+#: ../inc/ajax.php:44
+#, php-format
+msgid "Sorry, there already is %s schedule."
+msgstr "Harmonogram %s już istnieje."
+
+#: ../inc/ajax.php:48
+#, php-format
+msgid "Sorry, there already is schedule with %1$s seconds interval (%2$s)."
+msgstr "Harmonogram z interwałem %1$s sekund już istnieje (%2$s)."
+
+#: ../inc/ajax.php:60 ../inc/main.php:219
+#, php-format
+msgid "Are you sure you want to delete %s schedule?"
+msgstr "Na pewno chcesz usunąć harmonogram %s?"
+
+#: ../inc/ajax.php:80
+msgid "Sorry, there is no schedule to remove."
+msgstr "Przepraszam, nie ma żadnego harmonogramu do usunięcia."
+
+#: ../inc/ajax.php:102
+msgid "Task hook can't be empty."
+msgstr "Nazwa zadania nie może być pusta."
+
+#: ../inc/ajax.php:106
+msgid "Schedule name can't be empty."
+msgstr "Nazwa harmonogramu nie może być pusta."
+
+#: ../inc/ajax.php:119 ../inc/ajax.php:126
+msgid "Sorry, something goes wrong."
+msgstr "Przepraszam, coś poszło nie tak."
+
+#: ../inc/ajax.php:143 ../inc/main.php:302
+msgid "Execute"
+msgstr "Wykonaj"
+
+#: ../inc/ajax.php:164
+msgid "Sorry, it's wrong data to remove"
+msgstr "Złe dane do usunięcia."
+
+#: ../inc/ajax.php:168
+msgid "Removed."
+msgstr "Usunięte."
+
+#: ../inc/main.php:89
+msgid "Advanced Cron Manager"
+msgstr "Zaawansowany manager Cron"
+
+#: ../inc/main.php:131
+msgid "Schedule added successfully."
+msgstr "Harmonogram pomyślnie dodany."
+
+#: ../inc/main.php:132
+msgid "Schedule removed successfully."
+msgstr "Harmonogram pomyślnie usunięty."
+
+#: ../inc/main.php:133
+msgid "Task added successfully."
+msgstr "Zadanie pomyślnie dodane."
+
+#: ../inc/main.php:134
+msgid "Task removed successfully."
+msgstr "Zadanie pomyślnie usunięte."
+
+#: ../inc/main.php:135
+msgid "Task executed successfully."
+msgstr "Zadanie pomyślnie wykonane."
+
+#: ../inc/main.php:151
+msgid "Cron Schedules"
+msgstr "Harmonogramy Crona"
+
+#: ../inc/main.php:158
+msgid "Informations"
+msgstr "Informacje"
+
+#: ../inc/main.php:165
+msgid "Check this out!"
+msgstr "Warte uwagi!"
+
+#: ../inc/main.php:176
+msgid ""
+"Please remember - after deactivation of this plugin added Schedules "
+"<strong>will be not available</strong>. Added Tasks will still work."
+msgstr ""
+"Pamiętaj - po deaktywacji wtyczki dodane harmonogramy <strong>nie będą "
+"dostępne</strong>. Dodane zadania zostaną normalnie wykonane."
+
+#: ../inc/main.php:180
+msgid ""
+"Important - WordPress Cron is depended on the User. WP Cron fires "
+"<strong>only on the page visit</strong> so it can be not accurate."
+msgstr ""
+"Uwaga - Cron WordPressa ściśle zależy od użytkownika. Jest on wykonywany "
+"<strong>tylko przy odwiedzinach</strong>, więc może nie być dokładny."
+
+#: ../inc/main.php:188
+msgid ""
+"Did you ever searched for beautiful minimalistic and non aggressive popup?"
+msgstr ""
+"Czy kiedykolwiek szukałeś pięknego, minimalistycznego i nie agresywnego "
+"popupa?"
+
+#: ../inc/main.php:191
+msgid "Install Popslide"
+msgstr "Zainstaluj Popslide"
+
+#: ../inc/main.php:191
+msgid "Try Popslide!"
+msgstr "Sprawdź Popslide!"
+
+#: ../inc/main.php:208
+msgid "Add Schedule"
+msgstr "Dodaj harmonogram"
+
+#: ../inc/main.php:217
+msgid "Schedule protected"
+msgstr "Harmonogram chroniony"
+
+#: ../inc/main.php:228
+msgid "Interval (seconds)"
+msgstr "Interwał (sekund)"
+
+#: ../inc/main.php:233
+msgid "Name"
+msgstr "Nazwa"
+
+#: ../inc/main.php:234
+msgid "weekly"
+msgstr "tygodniowy"
+
+#: ../inc/main.php:238
+msgid "Description"
+msgstr "Opis"
+
+#: ../inc/main.php:239
+msgid "Once weekly"
+msgstr "Raz na tydzień"
+
+#: ../inc/main.php:244
+msgid "Add schedule"
+msgstr "Dodaj harmonogram"
+
+#: ../inc/main.php:257 ../inc/main.php:267
+msgid "Hook"
+msgstr "Nazwa"
+
+#: ../inc/main.php:258 ../inc/main.php:268
+msgid "Schedule"
+msgstr "Harmonogram"
+
+#: ../inc/main.php:259 ../inc/main.php:269
+msgid "Arguments"
+msgstr "Argumenty"
+
+#: ../inc/main.php:260 ../inc/main.php:270
+msgid "Next execution"
+msgstr "Następne wykonanie"
+
+#: ../inc/main.php:261 ../inc/main.php:271
+msgid "Action"
+msgstr "Akcja"
+
+#: ../inc/main.php:298
+msgid "single"
+msgstr "pojedynczy"
+
+#: ../inc/main.php:320
+msgid "Add Task"
+msgstr "Dodaj zadanie"
+
+#: ../inc/main.php:328
+msgid "schedule_hook_for_action"
+msgstr "nazwa_haka_do_akcji"
+
+#: ../inc/main.php:332
+msgid "Execute now"
+msgstr "Wykonaj teraz"
+
+#: ../inc/main.php:334
+msgid "seconds"
+msgstr "sekund"
+
+#: ../inc/main.php:336
+msgid "Then repeat"
+msgstr "Poźniej powtarzaj"
+
+#: ../inc/main.php:341
+msgid "Don't repeat"
+msgstr "Nie powtarzaj"
+
+#: ../inc/main.php:347
+msgid "Add Argument"
+msgstr "Dodaj argument"
+
+#: ../inc/main.php:351
+msgid "Add task"
+msgstr "Dodaj zadanie"
+
+#: ../inc/main.php:367
+msgid "Task protected"
+msgstr "Zadanie chronione"
+
+#: ../inc/main.php:372
+#, php-format
+msgid "Are you sure you want to delete %s task?"
+msgstr "Na pewno chcesz usunąć zadanie %s?"
+
+#: ../inc/main.php:372
+msgid "Remove"
+msgstr "Usuń"

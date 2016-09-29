@@ -1,0 +1,27 @@
+.header{background:url(images/header_bg.png) repeat-x top;}
+.header span{text-shadow:1px 1px #000000;}
+a{color:#000000;}
+blockquote{color:#000000;}
+h6{color:#dcdcdc;}
+a.left_bt{background:url(images/left_bt.png) no-repeat center; text-shadow:1px 1px #000000;}
+.left_nav a{text-shadow:1px 1px #000000; background:url(images/left_bt.png) no-repeat center; }
+.right_nav a{text-shadow:1px 1px #000000;background:url(images/left_bt.png) no-repeat center; }
+
+.post_details{background-color:#000000;}
+.comment span a{color:#000000;}
+.services_content a{color:#000000;}
+
+input.form_submit{background:url(images/left_bt.png) no-repeat center;text-shadow:1px 1px #000000;}
+input.form_submit_right{background:url(images/left_bt.png) no-repeat center;text-shadow:1px 1px #000000;}
+input.contact_submit{background:url(images/left_bt.png) no-repeat center;text-shadow:1px 1px #000000;}
+
+.corner_wrap h2 a:hover, .corner_wrap h2 a:focus{ color:#000000;}
+
+.trigger a:hover, .trigger a:hover:focus{color:#000000;}
+.toggle_container ul li a:hover, .toggle_container ul li a:focus{color:#000000;}
+
+a#next{background:url(images/right_nav_a.png) no-repeat center;}
+a#prev{background:url(images/left_nav_a.png) no-repeat center;}
+
+#footer{background:url(images/footer_bg.jpg) repeat-x center;}
+#footer span{text-shadow:1px 1px #000000;}

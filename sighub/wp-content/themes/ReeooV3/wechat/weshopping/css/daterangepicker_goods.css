@@ -1,0 +1,22 @@
+﻿.daterangepicker .ranges input {
+	font-size:13px;
+	cursor: not-allowed;
+	background-color: #eeeeee;
+	border:1px solid #cccccc;
+	border-radius:4px;
+	height:32px;
+}
+.daterangepicker .ranges label {
+	font-size:11px;
+	display:block;
+	line-height:20px;
+}
+.daterangepicker_end_input{
+	margin-left:-11px;
+	margin-bottom:4px;
+}
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.ampmselect {
+  width: 60px;
+  margin-bottom: 0;
+  border: 1px solid #cccccc;  border-radius:4px;
+}
